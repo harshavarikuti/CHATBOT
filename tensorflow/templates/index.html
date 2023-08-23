@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intent Recognition</title>
+</head>
+<body>
+    <h1>Intent Recognition</h1>
+    <form id="input-form">
+        <label for="user-input">Enter your message:</label><br>
+        <textarea id="user-input" name="user_input" rows="4" cols="50"></textarea><br>
+        <button type="button" onclick="getResponse()">Get Response</button>
+    </form>
+    <p>Response: <span id="response"></span></p>
+
+    <script>
+        function getResponse() {
+            var userInput = document.getElementById("user-input").value;
+
+            fetch('/get_response', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ user_input: userInput }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("response").textContent = data.response;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>

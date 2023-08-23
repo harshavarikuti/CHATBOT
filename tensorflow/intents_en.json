@@ -1,0 +1,44 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hello", "hi", "hey"],
+      "responses": ["Hello! Welcome to our online store.", "Hi there! How can I assist you?", "Hey, how can I help you today?"]
+    },
+    {
+      "tag": "product_info",
+      "patterns": ["tell me about products", "show me the products", "what do you sell"],
+      "responses": ["We offer a wide range of products including electronics, clothing, accessories, and more.", "Our products include electronics, clothing, accessories, and more. How can I help you find something specific?"]
+    },
+    {
+      "tag": "product_search",
+      "patterns": ["find me a product", "search for products", "looking for something"],
+      "responses": ["Sure! What type of product are you looking for?", "Of course! Please let me know what kind of product you're interested in."]
+    },
+    {
+      "tag": "product_details",
+      "patterns": ["tell me about [product]", "details of [product]", "more about [product]"],
+      "responses": ["Sure! The [product] is a high-quality item with [description]. It's priced at [price].", "The [product] is one of our popular products. It features [details] and is available for just [price]."]
+    },
+    {
+      "tag": "purchase",
+      "patterns": ["how to buy", "place an order", "make a purchase"],
+      "responses": ["To make a purchase, simply add the desired products to your cart and proceed to checkout. Our secure payment options ensure a smooth shopping experience.", "You can place an order by selecting the products you want and going through the checkout process. We accept various payment methods for your convenience."]
+    },
+    {
+      "tag": "help",
+      "patterns": ["help", "I need assistance", "customer support"],
+      "responses": ["I'm here to help! Please let me know what you need assistance with.", "Don't worry, I'm here to assist you. Please describe the issue or question you have."]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you later"],
+      "responses": ["Thank you for visiting us! Have a great day.", "Goodbye! Feel free to return anytime."]
+    },
+    {
+      "tag": "default",
+      "patterns": ["", "default"],
+      "responses": ["I'm sorry, I'm not sure I understand that. Could you please rephrase?", "I'm not quite sure what you mean. Can you provide more context?"]
+    }
+  ]
+}
